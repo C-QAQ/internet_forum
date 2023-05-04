@@ -51,6 +51,7 @@ func Login(user *models.User) (err error) {
 	return
 }
 
+// GetUserById 根据用户id查询用户信息
 func GetUserById(uid int64) (user *models.User, err error) {
 	sqlStr := `select user_id, username
 			from user where user_id = ?`
@@ -59,6 +60,7 @@ func GetUserById(uid int64) (user *models.User, err error) {
 	return
 }
 
+// encryptPassword 用户前端输入明文密码加密为密文密码
 func encryptPassword(oPassword string) string {
 	h := md5.New()
 	h.Write([]byte(secret))

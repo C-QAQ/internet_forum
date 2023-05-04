@@ -292,3 +292,44 @@
 {"level":"INFO","time":"2023-04-28T22:06:26.967+0800","caller":"logger/logger.go:45","msg":"init logger success"}
 {"level":"INFO","time":"2023-04-28T22:08:00.442+0800","caller":"logger/logger.go:45","msg":"init logger success"}
 {"level":"INFO","time":"2023-04-28T22:08:28.518+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-04T16:18:27.338+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-04T16:19:15.073+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-04T16:20:13.924+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-04T16:20:56.676+0800","caller":"logger/logger.go:78","msg":"/api/v1/post/9989367611265024","status":200,"method":"GET","path":"/api/v1/post/9989367611265024","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0243703}
+{"level":"INFO","time":"2023-05-04T16:21:20.284+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-04T16:21:26.390+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-04T16:22:03.902+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-04T16:22:07.558+0800","caller":"logger/logger.go:78","msg":"/api/v1/post/9989367611265024","status":200,"method":"GET","path":"/api/v1/post/9989367611265024","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.002415}
+{"level":"INFO","time":"2023-05-04T16:31:40.641+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-04T16:32:06.496+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-04T16:32:27.332+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-04T16:33:03.827+0800","caller":"logger/logger.go:78","msg":"/api/v1/post/","status":200,"method":"GET","path":"/api/v1/post/","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0}
+{"level":"INFO","time":"2023-05-04T16:33:11.705+0800","caller":"logger/logger.go:78","msg":"/api/v1/post/","status":200,"method":"GET","path":"/api/v1/post/","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0023534}
+{"level":"INFO","time":"2023-05-04T16:35:09.407+0800","caller":"logger/logger.go:78","msg":"/api/v1/post/","status":200,"method":"GET","path":"/api/v1/post/","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0022557}
+{"level":"INFO","time":"2023-05-04T16:35:53.368+0800","caller":"logger/logger.go:78","msg":"/api/v1/post/","status":200,"method":"GET","path":"/api/v1/post/","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0016247}
+{"level":"INFO","time":"2023-05-04T16:36:31.585+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-04T16:36:33.914+0800","caller":"logger/logger.go:78","msg":"/api/v1/posts/","status":200,"method":"GET","path":"/api/v1/posts/","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0032762}
+{"level":"INFO","time":"2023-05-04T16:42:24.928+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-04T16:42:58.565+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"ERROR","time":"2023-05-04T16:43:11.048+0800","caller":"controller/post.go:77","msg":"logic.GetPostList() failed","error":"Error 1690 (22003): signed integer value is out of range in 'mysqld_stmt_execute'"}
+{"level":"INFO","time":"2023-05-04T16:43:11.049+0800","caller":"logger/logger.go:78","msg":"/api/v1/posts/","status":200,"method":"GET","path":"/api/v1/posts/","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0133503}
+{"level":"ERROR","time":"2023-05-04T16:43:36.924+0800","caller":"controller/post.go:77","msg":"logic.GetPostList() failed","error":"Error 1690 (22003): signed integer value is out of range in 'mysqld_stmt_execute'"}
+{"level":"INFO","time":"2023-05-04T16:43:36.924+0800","caller":"logger/logger.go:78","msg":"/api/v1/posts/","status":200,"method":"GET","path":"/api/v1/posts/","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0003522}
+{"level":"INFO","time":"2023-05-04T16:44:38.664+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"ERROR","time":"2023-05-04T16:44:46.181+0800","caller":"controller/post.go:77","msg":"logic.GetPostList() failed","error":"Error 1690 (22003): signed integer value is out of range in 'mysqld_stmt_execute'"}
+{"level":"INFO","time":"2023-05-04T16:44:46.181+0800","caller":"logger/logger.go:78","msg":"/api/v1/posts/","status":200,"method":"GET","path":"/api/v1/posts/","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0012801}
+{"level":"ERROR","time":"2023-05-04T16:44:53.025+0800","caller":"controller/post.go:77","msg":"logic.GetPostList() failed","error":"Error 1690 (22003): signed integer value is out of range in 'mysqld_stmt_execute'"}
+{"level":"INFO","time":"2023-05-04T16:44:53.025+0800","caller":"logger/logger.go:78","msg":"/api/v1/posts/","status":200,"method":"GET","path":"/api/v1/posts/","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0002203}
+{"level":"INFO","time":"2023-05-04T16:45:13.526+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"ERROR","time":"2023-05-04T16:45:16.694+0800","caller":"controller/post.go:77","msg":"logic.GetPostList() failed","error":"Error 1690 (22003): signed integer value is out of range in 'mysqld_stmt_execute'"}
+{"level":"INFO","time":"2023-05-04T16:45:16.694+0800","caller":"logger/logger.go:78","msg":"/api/v1/posts/","status":200,"method":"GET","path":"/api/v1/posts/","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0028289}
+{"level":"INFO","time":"2023-05-04T16:46:19.271+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-04T16:46:22.766+0800","caller":"logger/logger.go:78","msg":"/api/v1/posts/","status":200,"method":"GET","path":"/api/v1/posts/","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0023355}
+{"level":"INFO","time":"2023-05-04T16:47:32.719+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-04T16:47:38.154+0800","caller":"logger/logger.go:78","msg":"/api/v1/posts/","status":200,"method":"GET","path":"/api/v1/posts/","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.003485}
+{"level":"INFO","time":"2023-05-04T16:47:51.649+0800","caller":"logger/logger.go:78","msg":"/api/v1/posts/","status":200,"method":"GET","path":"/api/v1/posts/","query":"page=1&size=1","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0008625}
+{"level":"INFO","time":"2023-05-04T16:47:59.660+0800","caller":"logger/logger.go:78","msg":"/api/v1/posts/","status":200,"method":"GET","path":"/api/v1/posts/","query":"page=2&size=1","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0010512}
+{"level":"INFO","time":"2023-05-04T16:48:08.174+0800","caller":"logger/logger.go:78","msg":"/api/v1/posts/","status":200,"method":"GET","path":"/api/v1/posts/","query":"page=1&size=1","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0015659}
+{"level":"INFO","time":"2023-05-04T16:48:11.651+0800","caller":"logger/logger.go:78","msg":"/api/v1/posts/","status":200,"method":"GET","path":"/api/v1/posts/","query":"page=2&size=1","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0006354}
+{"level":"INFO","time":"2023-05-04T16:48:25.884+0800","caller":"logger/logger.go:78","msg":"/api/v1/posts/","status":200,"method":"GET","path":"/api/v1/posts/","query":"page=3&size=1","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0009682}
+{"level":"INFO","time":"2023-05-04T16:48:53.428+0800","caller":"logger/logger.go:78","msg":"/api/v1/posts/","status":200,"method":"GET","path":"/api/v1/posts/","query":"page=3&size=1","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0010219}
