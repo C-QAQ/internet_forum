@@ -3,13 +3,18 @@ package logic
 import (
 	"go.uber.org/zap"
 	"internet_forum/dao/mysql"
+	"internet_forum/dao/redis"
 	"internet_forum/models"
 	"internet_forum/pkg/snowflake"
 )
 
 func CreatePost(p *models.Post) (err error) {
 	p.ID = snowflake.GenID()
-	return mysql.CreatePost(p)
+	if err = mysql.CreatePost(p); err != nil {
+		return err
+	}
+	err = redis.CreatePost(p.ID)
+	return err
 }
 
 // GetPostById 根据帖子id查询帖子详情

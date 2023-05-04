@@ -6,6 +6,11 @@ import (
 	"internet_forum/models"
 )
 
+// GetCommunityList
+//
+//	@Description: 获取所有社区的信息
+//	@return communityList
+//	@return err
 func GetCommunityList() (communityList []*models.Community, err error) {
 	sqlStr := "select community_id, community_name from community"
 	if err = db.Select(&communityList, sqlStr); err != nil {
@@ -17,6 +22,12 @@ func GetCommunityList() (communityList []*models.Community, err error) {
 	return
 }
 
+// GetCommunityDetailByID
+//
+//	@Description: 通过社区id获取社区信息
+//	@param id
+//	@return community
+//	@return err
 func GetCommunityDetailByID(id int64) (community *models.CommunityDetail, err error) {
 	community = new(models.CommunityDetail)
 	sqlStr := `select

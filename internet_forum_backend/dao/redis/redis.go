@@ -12,7 +12,7 @@ var (
 	Nil    = redis.Nil
 )
 
-// Init 初始化连接
+// Init 初始化redis连接
 func Init(cfg *setting.RedisConfig) (err error) {
 	client = redis.NewClient(&redis.Options{
 		Addr:         fmt.Sprintf("%s:%d", cfg.Host, cfg.Port),

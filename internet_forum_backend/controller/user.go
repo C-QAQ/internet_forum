@@ -2,6 +2,7 @@ package controller
 
 import (
 	"errors"
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
 	"go.uber.org/zap"
@@ -52,7 +53,7 @@ func LoginHandler(c *gin.Context) {
 		ResponseErrorWithMsg(c, CodeInvalidParam, removeTopStruct(errs.Translate(trans))) // 翻译错误
 		return
 	}
-	aToken, rToken, err := logic.Login(p)
+	user, err := logic.Login(p)
 	if err != nil {
 		zap.L().Error("logic.Login failed", zap.String("username", p.Username), zap.Error(err))
 		if errors.Is(err, mysql.ErrorUserNotExist) {
@@ -66,7 +67,9 @@ func LoginHandler(c *gin.Context) {
 		return
 	}
 	ResponseSuccess(c, gin.H{
-		"access_token":  aToken,
-		"refresh_token": rToken,
+		"user_id":       fmt.Sprintf("%d", user.UserID),
+		"username":      user.Username,
+		"access_token":  user.AToken,
+		"refresh_token": user.RToken,
 	})
 }
