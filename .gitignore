@@ -17,6 +17,9 @@ tmp
 # Test binary, built with `go test -c`
 *.test
 
+# LOG
+*.log
+
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
