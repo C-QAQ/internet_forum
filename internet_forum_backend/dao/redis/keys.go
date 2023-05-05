@@ -12,6 +12,8 @@ const (
 	KeyPostScoreZSet = "post:score"
 	// KeyPostVotedZSetPF ZSet:记录用户及投票的类型;参数是postID
 	KeyPostVotedZSetPF = "post:voted:"
+	// KeyCommunitySetPF set:保存每个分区下帖子的id
+	KeyCommunitySetPF = "community:"
 )
 
 func getRedisKey(key string) string {
