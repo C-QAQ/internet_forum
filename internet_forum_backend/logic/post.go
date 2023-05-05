@@ -116,8 +116,15 @@ func GetPostListV2(p *models.ParamPostList) (data []*models.ApiPostDetail, err e
 		return
 	}
 
+	// 查询每篇帖子的投票数
+	voteData, err := redis.GetPostVoteData(ids)
+	if err != nil {
+		zap.L().Error("redis.GetPostVoteData() failed", zap.Error(err))
+		return
+	}
+
 	// 拼接数据 将post的作者以及帖子所处社区信息绑定
-	for _, post := range posts {
+	for idx, post := range posts {
 		// 根据作者id查询作者信息
 		var user *models.User
 		user, err = mysql.GetUserById(post.AuthorID)
@@ -139,6 +146,7 @@ func GetPostListV2(p *models.ParamPostList) (data []*models.ApiPostDetail, err e
 
 		postDetail := &models.ApiPostDetail{
 			AuthorName:      user.Username,
+			VoteNum:         voteData[idx],
 			Post:            post,
 			CommunityDetail: community,
 		}
