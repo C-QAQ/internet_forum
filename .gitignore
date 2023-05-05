@@ -18,7 +18,7 @@ tmp
 *.test
 
 # LOG
-*.log
+internet_forum_backend/web_app.log
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out

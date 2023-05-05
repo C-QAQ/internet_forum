@@ -576,3 +576,55 @@
 {"level":"INFO","time":"2023-05-04T23:48:58.891+0800","caller":"logger/logger.go:78","msg":"/api/v1/vote","status":200,"method":"POST","path":"/api/v1/vote","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.002534}
 {"level":"INFO","time":"2023-05-04T23:52:54.002+0800","caller":"logger/logger.go:45","msg":"init logger success"}
 {"level":"INFO","time":"2023-05-04T23:53:25.082+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T15:36:27.640+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T15:39:47.156+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T15:40:40.242+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T15:44:32.368+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T15:48:28.470+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T15:54:21.185+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T15:55:51.996+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T15:55:55.569+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T15:55:59.701+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T15:56:04.358+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T15:58:38.862+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T16:19:23.857+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T16:19:37.419+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T16:20:15.479+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T16:21:12.971+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T16:21:34.450+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T16:21:50.270+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T16:22:27.252+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"ERROR","time":"2023-05-05T16:23:07.906+0800","caller":"logic/post.go:112","msg":"mysql.GetPostListByIDs() failed","error":"number of bindVars less than number arguments"}
+{"level":"ERROR","time":"2023-05-05T16:23:07.906+0800","caller":"controller/post.go:90","msg":"logic.GetPostList() failed","error":"number of bindVars less than number arguments"}
+{"level":"INFO","time":"2023-05-05T16:23:07.906+0800","caller":"logger/logger.go:78","msg":"/api/v2/posts/","status":200,"method":"GET","path":"/api/v2/posts/","query":"page=1&size=2&order=time","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0027785}
+{"level":"INFO","time":"2023-05-05T16:24:59.543+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T16:25:04.212+0800","caller":"logger/logger.go:78","msg":"/api/v2/posts/","status":200,"method":"GET","path":"/api/v2/posts/","query":"page=1&size=2&order=time","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0056654}
+{"level":"INFO","time":"2023-05-05T16:26:17.835+0800","caller":"logger/logger.go:78","msg":"/api/v2/posts/","status":200,"method":"GET","path":"/api/v2/posts/","query":"page=1&size=2&order=score","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0022149}
+{"level":"INFO","time":"2023-05-05T16:29:26.201+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"POST","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0191277}
+{"level":"INFO","time":"2023-05-05T16:29:38.601+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"POST","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0143136}
+{"level":"INFO","time":"2023-05-05T16:29:43.213+0800","caller":"logger/logger.go:78","msg":"/api/v1/post","status":200,"method":"POST","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.013247}
+{"level":"INFO","time":"2023-05-05T16:29:46.802+0800","caller":"logger/logger.go:78","msg":"/api/v2/posts/","status":200,"method":"GET","path":"/api/v2/posts/","query":"page=1&size=2&order=score","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0026493}
+{"level":"INFO","time":"2023-05-05T16:29:51.684+0800","caller":"logger/logger.go:78","msg":"/api/v2/posts/","status":200,"method":"GET","path":"/api/v2/posts/","query":"page=1&size=2&order=time","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0015627}
+{"level":"INFO","time":"2023-05-05T16:29:59.274+0800","caller":"logger/logger.go:78","msg":"/api/v2/posts/","status":200,"method":"GET","path":"/api/v2/posts/","query":"page=1&size=2&order=time","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0020773}
+{"level":"INFO","time":"2023-05-05T16:30:05.082+0800","caller":"logger/logger.go:78","msg":"/api/v2/posts/","status":200,"method":"GET","path":"/api/v2/posts/","query":"page=1&size=1&order=time","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0025802}
+{"level":"INFO","time":"2023-05-05T16:34:33.438+0800","caller":"logger/logger.go:78","msg":"/api/v2/posts/","status":200,"method":"GET","path":"/api/v2/posts/","query":"page=1&size=1&order=time","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0021389}
+{"level":"INFO","time":"2023-05-05T16:34:40.500+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T16:34:43.721+0800","caller":"logger/logger.go:78","msg":"/api/v2/posts/","status":200,"method":"GET","path":"/api/v2/posts/","query":"page=1&size=1&order=time","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.007826}
+{"level":"INFO","time":"2023-05-05T16:36:09.837+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T16:36:16.252+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T16:36:29.196+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T16:36:32.668+0800","caller":"logger/logger.go:78","msg":"/api/v2/posts/","status":200,"method":"GET","path":"/api/v2/posts/","query":"page=1&size=1&order=time","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0139997}
+{"level":"INFO","time":"2023-05-05T16:36:51.875+0800","caller":"logger/logger.go:78","msg":"/api/v2/posts/","status":200,"method":"GET","path":"/api/v2/posts/","query":"page=1&size=2&order=time","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0015858}
+{"level":"INFO","time":"2023-05-05T16:37:47.874+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T16:37:48.849+0800","caller":"logger/logger.go:78","msg":"/api/v2/posts/","status":200,"method":"GET","path":"/api/v2/posts/","query":"page=1&size=2&order=time","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0033213}
+{"level":"INFO","time":"2023-05-05T16:39:07.356+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T16:39:18.226+0800","caller":"logger/logger.go:78","msg":"/api/v2/posts/","status":200,"method":"GET","path":"/api/v2/posts/","query":"page=1&size=2&order=score","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0027184}
+{"level":"INFO","time":"2023-05-05T16:39:59.700+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T16:40:15.807+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T16:40:30.563+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T16:43:11.055+0800","caller":"logger/logger.go:78","msg":"/api/v2/posts/","status":200,"method":"GET","path":"/api/v2/posts/","query":"page=1&size=2&order=score","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0027163}
+{"level":"INFO","time":"2023-05-05T16:44:20.224+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T16:44:31.040+0800","caller":"logger/logger.go:78","msg":"/api/v2/posts/","status":200,"method":"GET","path":"/api/v2/posts/","query":"page=1&size=2&order=score","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.002903}
+{"level":"INFO","time":"2023-05-05T16:46:09.815+0800","caller":"logger/logger.go:78","msg":"/api/v2/posts/","status":200,"method":"GET","path":"/api/v2/posts/","query":"page=1&size=2&order=time","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0015687}
+{"level":"INFO","time":"2023-05-05T16:47:00.321+0800","caller":"logger/logger.go:45","msg":"init logger success"}
+{"level":"INFO","time":"2023-05-05T16:47:01.873+0800","caller":"logger/logger.go:78","msg":"/api/v2/posts/","status":200,"method":"GET","path":"/api/v2/posts/","query":"page=1&size=2&order=time","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.2","errors":"","cost":0.0041107}

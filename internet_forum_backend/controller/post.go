@@ -64,3 +64,34 @@ func GetPostListHandler(c *gin.Context) {
 	}
 	ResponseSuccess(c, data)
 }
+
+// GetPostListHandlerV2 根据参数动态获取帖子列表
+// 按照创建时间排序 或 按照热度排序
+// @param page
+// @param size
+// @param order
+// GET api/v2/posts?page=?&size=?&order=?
+func GetPostListHandlerV2(c *gin.Context) {
+	// 获取分页参数
+	// 设置默认参数
+	p := &models.ParamPostList{
+		Page:  1,
+		Size:  10,
+		Order: models.OrderTime,
+	}
+	// 绑定query参数
+	if err := c.ShouldBindQuery(p); err != nil {
+		zap.L().Error("GetPostListHandlerV2 with invalid params",
+			zap.Error(err))
+		ResponseError(c, CodeInvalidParam)
+		return
+	}
+	// redis查询id列表
+	data, err := logic.GetPostListV2(p)
+	if err != nil {
+		zap.L().Error("logic.GetPostList() failed", zap.Error(err))
+		ResponseError(c, CodeServerBusy)
+		return
+	}
+	ResponseSuccess(c, data)
+}

@@ -34,6 +34,24 @@ func Setup(mode string) *gin.Engine {
 		v1.POST("/vote", controller.PostVoteController)
 	}
 
+	v2 := r.Group("api/v2")
+	//注册路由
+	{
+		v2.POST("/signup", controller.SignUpHandler)
+		v2.POST("/login", controller.LoginHandler)
+	}
+	v2.Use(middlewares.JWTAuthMiddleware())
+	{
+		v2.GET("/community", controller.CommunityHandler)
+		v2.GET("/community/:id", controller.CommunityDetailHandler)
+
+		v2.POST("/post", controller.CreatePostHandler)
+		v2.GET("/post/:id", controller.GetPostDetailHandler)
+		v2.GET("/posts/", controller.GetPostListHandlerV2)
+
+		v2.POST("/vote", controller.PostVoteController)
+	}
+
 	r.GET("/ping", middlewares.JWTAuthMiddleware(), func(c *gin.Context) {
 		c.String(http.StatusOK, "pong")
 	})
