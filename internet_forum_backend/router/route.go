@@ -2,7 +2,10 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 	"internet_forum/controller"
+	_ "internet_forum/docs"
 	"internet_forum/logger"
 	"internet_forum/middlewares"
 	"net/http"
@@ -51,6 +54,8 @@ func Setup(mode string) *gin.Engine {
 
 		v2.POST("/vote", controller.PostVoteController)
 	}
+	// docs route
+	r.GET("/docs/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	r.GET("/ping", middlewares.JWTAuthMiddleware(), func(c *gin.Context) {
 		c.String(http.StatusOK, "pong")

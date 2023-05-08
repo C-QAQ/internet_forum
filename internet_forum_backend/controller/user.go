@@ -11,6 +11,15 @@ import (
 	"internet_forum/models"
 )
 
+// SignUpHandler 注册
+// @Summary 注册
+// @Description 注册
+// @Tags 用户
+// @Accept application/json
+// @Produce application/json
+// @Param obj body models.ParamSignUp true "用户注册参数"
+// @Success 200
+// @Router /api/v1/signup [post]
 func SignUpHandler(c *gin.Context) {
 	//1.获取参数和参数校验
 	p := new(models.ParamSignUp)
@@ -40,6 +49,15 @@ func SignUpHandler(c *gin.Context) {
 	ResponseSuccess(c, nil)
 }
 
+// LoginHandler 登录
+// @Summary 登录
+// @Description 登录
+// @Tags 用户
+// @Accept application/json
+// @Produce application/json
+// @Param obj body models.ParamLogin true "登录参数"
+// @Success 200 {object} _ResponseLogin
+// @Router /api/v1/login [post]
 func LoginHandler(c *gin.Context) {
 	// 获取请求参数
 	p := new(models.ParamLogin)

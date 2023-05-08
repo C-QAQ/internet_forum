@@ -9,6 +9,16 @@ import (
 )
 
 // CreatePostHandler 创建帖子
+// @Summary 创建帖子
+// @Description 创建新帖子，存入数据库并在redis中记录该帖子的分数和所处社区
+// @Tags 帖子
+// @Accept application/json
+// @Produce application/json
+// @Param Authorization header string true "Bearer JWT_AToken"
+// @Param obj body models.Post false "参数"
+// @Security ApiKeyAuth
+// @Success 200 {object} _ResponseCreatePost
+// @Router /api/v1/post [post]
 func CreatePostHandler(c *gin.Context) {
 	p := new(models.Post)
 	if err := c.ShouldBindJSON(p); err != nil {
@@ -33,7 +43,17 @@ func CreatePostHandler(c *gin.Context) {
 	ResponseSuccess(c, nil)
 }
 
-// GetPostDetailHandler 获取帖子详情
+// GetPostDetailHandler 通过post id获取post详情
+// @Summary 通过post id获取post详情
+// @Description 通过post id获取post内容以及所所在社区和作者名
+// @Tags 帖子
+// @Accept application/json
+// @Produce application/json
+// @Param Authorization header string true "Bearer JWT"
+// @Param id path int64 true "帖子id"
+// @Security ApiKeyAuth
+// @Success 200 {object} _ResponsePostDetail
+// @Router /api/v1/post/{id} [get]
 func GetPostDetailHandler(c *gin.Context) {
 	// 获取参数(从URL中获取帖子id)
 	pidStr := c.Param("id")
@@ -52,7 +72,18 @@ func GetPostDetailHandler(c *gin.Context) {
 	ResponseSuccess(c, data) // 获取成功返回响应
 }
 
-// GetPostListHandler 帖子的分页查询
+// GetPostListHandler 帖子分页查询
+// @Summary 概况
+// @Description 描述
+// @Tags 帖子
+// @Accept application/json
+// @Produce application/json
+// @Param Authorization header string true "Bearer JWT"
+// @Param page path string false "页码"
+// @Param size path string false "页面大小"
+// @Security ApiKeyAuth
+// @Success 200 {object} _ResponsePostList
+// @Router /api/v1/posts [post]
 func GetPostListHandler(c *gin.Context) {
 	// 获取分页参数
 	page, size := getPageInfo(c)
@@ -65,12 +96,17 @@ func GetPostListHandler(c *gin.Context) {
 	ResponseSuccess(c, data)
 }
 
-// GetPostListHandlerV2 根据参数动态获取帖子列表
-// 按照创建时间排序 或 按照热度排序
-// @param page
-// @param size
-// @param order
-// GET api/v2/posts?page=?&size=?&order=?
+// GetPostListHandlerV2 获取帖子分页数据
+// @Summary 获取帖子分页数据
+// @Description 根据社区id（可以为空）、页码、数量返回分页数据
+// @Tags 帖子
+// @Accept application/json
+// @Produce application/json
+// @Param Authorization header string true "Bearer JWT"
+// @Param object query models.ParamPostList false "查询参数"
+// @Security ApiKeyAuth
+// @Success 200 {object} _ResponsePostList
+// @Router /api/v2/posts [get]
 func GetPostListHandlerV2(c *gin.Context) {
 	op, err := strconv.ParseInt(c.Query("community_id"), 10, 64)
 	if op > 0 && err == nil { // 如果query包含community_id则走另外一个handler
@@ -103,6 +139,7 @@ func GetPostListHandlerV2(c *gin.Context) {
 	ResponseSuccess(c, data)
 }
 
+// GetCommunityPostListHandler 获取帖子分页数据（含社区分类）
 func GetCommunityPostListHandler(c *gin.Context) {
 	p := &models.ParamPostList{
 		Page:        1,

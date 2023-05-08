@@ -10,6 +10,17 @@ import (
 
 // 投票
 
+// PostVoteController 给帖子投票
+// @Summary 给帖子投票
+// @Description 描述
+// @Tags 帖子
+// @Accept application/json
+// @Produce application/json
+// @Param Authorization header string true "Bearer JWT"
+// @Param obj query models.ParamVoteData true "帖子投票参数"
+// @Security ApiKeyAuth
+// @Success 200
+// @Router /api/v1/vote [post]
 func PostVoteController(c *gin.Context) {
 	// 参数校验
 	p := new(models.ParamVoteData)

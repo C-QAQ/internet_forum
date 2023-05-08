@@ -15,7 +15,6 @@ import (
 
 // VoteForPost 为帖子投票具体投票的业务逻辑
 //
-//	@Description:
 //	p.Direction=1时，有两种情况:
 //		1. 之前没有投过票，现在投赞成票 --> 更新分数和投票纪录
 //		2. 之前投反对票，现在改投赞成票 --> 更新分数和投票纪录
@@ -29,8 +28,7 @@ import (
 //		每个帖子自发表之日起一个星期内允许用户投票，超过一个星期就不允许再投票。
 //			1. 到期之后将redis中保存的赞成票数存储到mysql表中
 //			2. 到期之后删除帖子 KeyPostVotedZSetPF
-//	@param userID
-//	@param p
+//	param userID *models.ParamVoteData
 func VoteForPost(userID int64, p *models.ParamVoteData) error {
 	zap.L().Debug("logic.VoteForPost()", zap.Int64("userID", userID),
 		zap.String("postID", p.PostID),
