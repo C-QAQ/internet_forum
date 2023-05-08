@@ -15,7 +15,7 @@ func TestCreatePostHandler(t *testing.T) {
 	url := "/api/v1/post"
 	r.POST(url, CreatePostHandler)
 	body := `{
-		"community_id": 1,
+		"community_id": "1",
 		"title": "test",
 		"content": "just a test."
 	}`

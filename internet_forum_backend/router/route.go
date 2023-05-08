@@ -9,6 +9,7 @@ import (
 	"internet_forum/logger"
 	"internet_forum/middlewares"
 	"net/http"
+	"time"
 )
 
 // Setup 路由
@@ -17,7 +18,10 @@ func Setup(mode string) *gin.Engine {
 		gin.SetMode(gin.ReleaseMode)
 	}
 	r := gin.New()
-	r.Use(logger.GinLogger(), logger.GinRecovery(true))
+	r.Use(logger.GinLogger(),
+		logger.GinRecovery(true),
+		middlewares.RateLimitMiddleware(2*time.Second, 1), // 限流操作,两秒钟放一个令牌
+	)
 
 	v1 := r.Group("/api/v1")
 	//注册路由
