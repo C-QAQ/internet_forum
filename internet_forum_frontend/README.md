@@ -1,4 +1,4 @@
-# internet_forum_frontend
+# bluebell_frontend
 
 ## Project setup
 ```

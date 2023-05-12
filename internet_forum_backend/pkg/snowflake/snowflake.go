@@ -1,6 +1,7 @@
 package snowflake
 
 import (
+	"go.uber.org/zap"
 	"time"
 
 	sf "github.com/bwmarrin/snowflake"
@@ -16,6 +17,7 @@ func Init(startTime string, machineID int64) (err error) {
 	}
 	sf.Epoch = st.UnixNano() / 1000000
 	node, err = sf.NewNode(machineID)
+	zap.L().Info("init snowflake success")
 	return
 }
 func GenID() int64 {

@@ -2,6 +2,7 @@ package controller
 
 import (
 	"fmt"
+	"go.uber.org/zap"
 	"internet_forum/models"
 	"reflect"
 	"strings"
@@ -60,8 +61,10 @@ func InitTrans(locale string) (err error) {
 		default:
 			err = enTranslations.RegisterDefaultTranslations(v, trans)
 		}
+		zap.L().Info("init translate success")
 		return
 	}
+	zap.L().Info("init translate success")
 	return
 }
 

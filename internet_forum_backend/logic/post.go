@@ -10,6 +10,7 @@ import (
 
 func CreatePost(p *models.Post) (err error) {
 	p.ID = snowflake.GenID()
+	zap.L().Debug("CreatePost", zap.Any("post", p))
 	if err = mysql.CreatePost(p); err != nil {
 		return err
 	}

@@ -1,6 +1,6 @@
 name: "internet_forum"
-mode: "dev"
-port: 8081
+mode: "release"
+port: 8888
 version: "v0.0.1"
 start_time: "2023-04-01"
 machine_id: 1
@@ -18,7 +18,7 @@ mysql:
   host: 127.0.0.1
   port: 3306
   user: "root"
-  password: "123456"
+  password: "1499660638"
   dbname: "test"
   max_open_conns: 200
   max_idle_conns: 50
